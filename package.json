@@ -1,6 +1,6 @@
 {
   "name": "hydroponics-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "dependencies": {
     "@esri/react-arcgis": "^5.1.0",
