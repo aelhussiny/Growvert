@@ -128,7 +128,7 @@ const PlantRecWStep = (props) => {
                         (plantationInfo.width * plantationInfo.height);
                     const capacity = plantationInfo.ports * plantationCount;
                     plant.attributes.EX_YIELD = Math.ceil(
-                        capacity * 1.3 - capacity * 1.3 * 0.02
+                        (capacity * 1.3) - ((capacity * 1.3) * 0.02)
                     );
                 });
 
@@ -200,7 +200,7 @@ const PlantRecWStep = (props) => {
                                     key={`plant_option_${i}_${plant.attributes.plant_type}`}
                                     onSelect={(plantInfo) => {
                                         props.onPlantSelection({
-                                            ...plantInfo                                            
+                                            ...plantInfo,
                                         });
                                         props.onComplete();
                                     }}

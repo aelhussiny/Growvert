@@ -156,10 +156,10 @@ const GrowScreen = ({ history }) => {
                                 );
                             }}
                         >
-                            <h3>{`${growData.attributes.creator.fname} ${growData.attributes.creator.lname}`}</h3>
+                            <h3>Grower: {`${growData.attributes.creator.fname} ${growData.attributes.creator.lname}`}</h3>
                         </Link>
                         <h3>
-                            {growData.attributes.Shape__Area.toLocaleString(
+                            Area: {growData.attributes.Shape__Area.toLocaleString(
                                 undefined,
                                 {
                                     maximumFractionDigits: 2,
@@ -168,7 +168,7 @@ const GrowScreen = ({ history }) => {
                             sqm
                         </h3>
                         <h3>
-                            {
+                            Type: {
                                 fields
                                     .filter(
                                         (field) =>
@@ -182,7 +182,7 @@ const GrowScreen = ({ history }) => {
                             }
                         </h3>
                         <h3>
-                            {new Date(
+                            Period: {new Date(
                                 growData.attributes.start_time
                             ).toLocaleDateString()}{" "}
                             -{" "}
@@ -190,7 +190,7 @@ const GrowScreen = ({ history }) => {
                                 growData.attributes.end_time
                             ).toLocaleDateString()}
                         </h3>
-                        <h3>{growData.attributes.expected_yield}</h3>
+                        <h3>Expected Yield: {growData.attributes.expected_yield}</h3>
                         <OneGrowScene
                             id={`grow_${growId}`}
                             data={growData}
